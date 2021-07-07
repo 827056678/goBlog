@@ -1,15 +1,15 @@
 package main
 
 import (
-    "fmt"
-    "net/http"
+	_ "beego/routers"
+
+	beego "github.com/beego/beego/v2/server/web"
 )
 
-func handlerFunc(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprint(w, "<h1>Hello, 这里是 goblog</h1>")
-}
-
 func main() {
-    http.HandleFunc("/", handlerFunc)
-    http.ListenAndServe(":3000", nil)
+	if beego.BConfig.RunMode == "dev" {
+		beego.BConfig.WebConfig.DirectoryIndex = true
+		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
+	}
+	beego.Run()
 }
