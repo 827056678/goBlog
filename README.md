@@ -1,5 +1,5 @@
 # goBlog
-go run main.go
+bee run
 
 
 # git add and commit and push
