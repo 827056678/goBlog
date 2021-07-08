@@ -1,9 +1,9 @@
 package main
 
 import (
-	_ "goBlog/routers"
-
 	beego "github.com/beego/beego/v2/server/web"
+	_ "github.com/go-sql-driver/mysql"
+	_ "goBlog/routers"
 )
 
 func main() {
