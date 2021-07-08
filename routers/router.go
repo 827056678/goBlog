@@ -8,7 +8,7 @@
 package routers
 
 import (
-	".\goBlog\/controllers"
+	"goBlog/controllers"
 
 	"github.com/astaxie/beego"
 )
