@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"encoding/json"
 	"goBlog/models"
+	"encoding/json"
 
 	"github.com/astaxie/beego"
 )
